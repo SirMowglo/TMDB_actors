@@ -11,8 +11,8 @@ export class ActorsService {
 
   constructor(private http:HttpClient) { }
 
-  public getActors(): Observable<ActorsResponse>{
-    return this.http.get<ActorsResponse>(`${environment.base_url}/person/popular?api_key=${environment.api_key}`);
+  public getActors(page: number): Observable<ActorsResponse>{
+    return this.http.get<ActorsResponse>(`${environment.base_url}/person/popular?api_key=${environment.api_key}&page=${page}`);
   }
   
 }

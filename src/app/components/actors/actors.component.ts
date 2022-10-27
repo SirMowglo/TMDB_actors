@@ -9,17 +9,29 @@ import { ActorsService } from 'src/app/services/actors.service';
 })
 export class ActorsComponent implements OnInit {
   actorsList!: Actor[];
+  page: number = 1;
+  maxPages: number = 10;
+
   
   constructor(private actorsService: ActorsService) { }
 
   ngOnInit(): void {
-    this.getActors();
+    this.getActors(this.page);
   }
 
-  getActors(){
-    this.actorsService.getActors().subscribe(resp=>{
+  getActors(page: number){
+    this.actorsService.getActors(page).subscribe(resp=>{
       this.actorsList = resp.results;
     })
+  }
+  
+  changePage(nextPage: number){
+    this.page = nextPage
+    this.getActors(this.page);
+  }
+
+  counter() {
+    return new Array(this.maxPages);
   }
 
   getActorImage(actor: Actor){
@@ -35,7 +47,7 @@ export class ActorsComponent implements OnInit {
     if(pelis != ""){
       return "Conocido por: " + pelis;
     }else{
-      return "";
+      return '';
     }
     
   }
