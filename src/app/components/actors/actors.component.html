@@ -4,7 +4,8 @@
       {{ actor.name }}
     </mat-card-title>
     <mat-card-subtitle>
-       
+       <span>{{getKnownFor(actor)}}</span>
     </mat-card-subtitle>
+    <img src="{{this.getActorImage(actor)}}" alt="">
   </mat-card>
 </div>

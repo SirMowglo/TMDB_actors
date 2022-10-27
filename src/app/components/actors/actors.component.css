@@ -1,8 +1,12 @@
 .container{
     display: flex;
     flex-wrap: wrap;
+    background-color: beige;
 }
 mat-card{
     width: 300px;
     margin: 30px;
+}
+img{
+    width: 300px;
 }
