@@ -23,7 +23,7 @@
   </div>
 </div>
 <div class="container">
-  <mat-card *ngFor="let actor of actorsList">
+  <mat-card *ngFor="let actor of actorsList" (click)="getActorDetail(actor)">
     <mat-card-title>
       {{ actor.name }}
     </mat-card-title>

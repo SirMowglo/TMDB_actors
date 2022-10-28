@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ActorsComponent } from './components/actors/actors.component';
 import { MaterialImportsModule } from './modules/material-imports/material-imports.module';
+import { ActorDetailsDiagComponent } from './dialogs/actor-details-diag/actor-details-diag.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActorsComponent
+    ActorsComponent,
+    ActorDetailsDiagComponent
   ],
   imports: [
     BrowserModule,
