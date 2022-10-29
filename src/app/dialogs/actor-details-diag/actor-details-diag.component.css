@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  width: 400px;
+  height: auto;
+}
+h1 {
+  width: 100%;
+  font-size: 35px;
+  background-color: rgb(162, 223, 187);
+  padding: 10px;
+  padding-left: 45px;
+  transform: translateX(-50px);
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+p {
+  font-size: 16px;
+}
+img {
+  width: 400px;
+  transform: translate(0px, -40px);
+}
+.img {
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border-radius: 200px;
+}
+
+.prueba{
+    width: 80%;
+    z-index: 5;
+    position: relative;
+    top: 120px;
+
+    font-size: 45px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    color: rgb(236, 236, 236);
+}

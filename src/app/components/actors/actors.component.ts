@@ -64,6 +64,7 @@ export class ActorsComponent implements OnInit {
       this.dialog.open(ActorDetailsDiagComponent, {
         data: {
           actorDetails: this.actorDetails,
+          actor: actor
         }
       })
     })

@@ -1,1 +1,18 @@
-<p>{{this.data.actorDetails.name}}</p>
+<div class="container">
+  <div class="prua">
+    <p class="prueba">{{this.truncNumber(this.data.actorDetails.popularity)}} pts</p>
+  </div>
+  <h1>
+    <b>{{ this.data.actorDetails.name }}</b>
+  </h1>
+  <div class="img">
+    <img src="{{ this.getActorImage(this.data.actor) }}" alt="" />
+  </div>
+  <p><b>Cumpleaños:</b> {{ this.data.actorDetails.birthday }}</p>
+  <p>
+    <b>Género: </b>
+    <span *ngIf="this.data.actorDetails.gender == 1">Female</span
+    ><span *ngIf="this.data.actorDetails.gender == 2">Male</span>
+  </p>
+  <p><b>Nacido en:</b> {{ this.data.actorDetails.place_of_birth }}</p>
+</div>
