@@ -6,13 +6,22 @@
     <b>{{ this.data.actorDetails.name }}</b>
   </h1>
   <div class="img">
-    <img src="{{ this.getActorImage(this.data.actor) }}" alt="" />
+    <img src="{{ this.getActorImage(this.data.actor) }}" alt="" class="avatar"/>
   </div>
-  <p><b>Cumpleaños:</b> {{ this.data.actorDetails.birthday }}</p>
+  <p><b>Cumpleaños: </b> {{ this.data.actorDetails.birthday }}</p>
   <p>
     <b>Género: </b>
     <span *ngIf="this.data.actorDetails.gender == 1">Female</span
     ><span *ngIf="this.data.actorDetails.gender == 2">Male</span>
   </p>
-  <p><b>Nacido en:</b> {{ this.data.actorDetails.place_of_birth }}</p>
+  <p><b>Nacido en: </b> {{ this.data.actorDetails.place_of_birth }}</p>
+  <div>
+    <p><b>Conocido por: </b></p>
+    <div class="containerCarrousel js-flickity">
+
+
+            <img *ngFor="let movie of moviesList" src="https://image.tmdb.org/t/p/original{{movie}}" alt="">
+
+    </div>
+  </div>
 </div>
