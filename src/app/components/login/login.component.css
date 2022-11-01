@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    justify-content: center;
+}
+.login{
+    display: grid;
+    justify-content: center;
+    margin-top: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+}
+.login button{
+    grid-row: 2;
+    width: 80px;
+    height: 30px;
+}
